@@ -14,6 +14,7 @@ public class Main {
         length = input.nextInt();
         array = new int[length][length];
         Random ran = new Random();
+        String s = null, s1 = null;
         if (length <= 1) {
             System.out.println("Невозможно создать матрицу такой длины!");
         } else {
@@ -69,9 +70,9 @@ public class Main {
                 for (int col = index - max; col < index + 1; col++) {
                     c[l++] = array[i][col];
                 }
-                System.out.println("Максимальная" + Arrays.toString(c) + " " + (max + 1));
+                s = Arrays.toString(c);
             }
-            if (minRow > min) {
+           /* if (minRow > min) {
                 min = minRow;
                 index1 = index1Row;
 
@@ -80,18 +81,14 @@ public class Main {
                 for (int col = index1 - min; col < index1 + 1; col++) {
                     d[l1++] = array[i][col];
                 }
-                System.out.println("Мин " + Arrays.toString(d) + " " + (min + 1));
-            }
+                s1 = Arrays.toString(d);
+            }*/
         }
 
-        //System.out.print("Максимальная последовательность возрастающих чисел:");
-      /*  int[] maxArray = new int[max + 1];
-        System.arraycopy(array, (index - max), maxArray, 0, (max + 1));*/
-        //System.out.println(Arrays.toString(c) + " " + (max + 1));
+        System.out.print("Максимальная последовательность возрастающих чисел:");
+        System.out.println(s + " " + (max + 1));
         /*System.out.print("Максимальная последовательность убывающих чисел:");
-        int[] minArray = new int[min + 1];
-        System.arraycopy(array, (index1 - min), minArray, 0, (min + 1));
-        System.out.println(Arrays.toString(minArray) + " " + (min + 1));*/
+        System.out.println(s1 + " " + (min + 1));*/
 
     }
 }
